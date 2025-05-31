@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<ToDoListWebApplication.Models.ToDoTask>
+
+<h2>To-Do List</h2>
+<p>
+    @Html.ActionLink("Add New Task", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@(item.IsCompleted ? "Completed" : "Pending")</td>
+            <td>
+                @if (!item.IsCompleted)
+                {
+                    @Html.ActionLink("Mark Complete", "Complete", new { id = item.Id })
+               }
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

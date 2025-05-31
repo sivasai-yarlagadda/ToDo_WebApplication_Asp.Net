@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@* Commented By Siva --> Default Content *@
+
+@* <div class="text-center"> *@
+@*     <h1 class="display-4">Welcome</h1> *@
+@*     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+@* </div> *@
+
+@* @model List<ToDoListWebApplication.Models.ToDoTask> *@
+
+@* <h2>To-Do List</h2> *@
+@* <p> *@
+@*     @Html.ActionLink("Add New Task", "Create") *@
+@* </p> *@
+
+@* <table class="table"> *@
+@*     <tr> *@
+@*         <th>Title</th> *@
+@*         <th>Status</th> *@
+@*         <th>Actions</th> *@
+@*     </tr> *@
+@*     @foreach (var item in Model) *@
+@*     { *@
+@*         <tr> *@
+@*             <td>@item.Title</td> *@
+@*             <td>@(item.IsCompleted ? "Completed" : "Pending")</td> *@
+@*             <td> *@
+@*                 @if (!item.IsCompleted) *@
+@*                 { *@
+@*                     @Html.ActionLink("Mark Complete", "Complete", new { id = item.Id }) *@
+@*                 } *@
+@*                 @Html.ActionLink("Delete", "Delete", new { id = item.Id }) *@
+@*             </td> *@
+@*         </tr> *@
+@*     } *@
+@* </table> *@
